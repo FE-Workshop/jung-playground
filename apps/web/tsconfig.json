@@ -1,0 +1,28 @@
+{
+	"extends": "@jung/typescript-config/nextjs.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./*"],
+			"@/components/*": ["components/*"],
+			"@jung/design-system/*": ["../../packages/design-system/*"]
+		},
+		"plugins": [
+			{
+				"name": "next"
+			}
+		]
+	},
+	"include": [
+		"next-env.d.ts",
+		"next.config.js",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts",
+		"jest.config.js",
+		"playwright.config.js",
+		"i18nConfig.js",
+		"app/i18n.js"
+	],
+	"exclude": ["node_modules"]
+}

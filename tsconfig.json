@@ -1,0 +1,3 @@
+{
+	"extends": "@jung/typescript-config/base.json"
+}
