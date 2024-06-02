@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import { ROUTE } from '@/constants/route';
 import Link from 'next/link';
 
@@ -10,8 +11,9 @@ type Params = {
 export default async function Home({ params: { locale } }: Params) {
 	return (
 		<div>
-			<h1>Home</h1>
-			<Link href={ROUTE.funnel}>Funnel</Link>
+			<Link href={ROUTE.funnel}>
+				<Button>Funnel</Button>
+			</Link>
 		</div>
 	);
 }

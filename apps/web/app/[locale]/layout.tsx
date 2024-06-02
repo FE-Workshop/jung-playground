@@ -17,7 +17,11 @@ export default function RootLayout({
 }): JSX.Element {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<div className='max-w-[960px] mx-auto min-h-dvh flex items-center justify-center'>
+					{children}
+				</div>
+			</body>
 		</html>
 	);
 }
