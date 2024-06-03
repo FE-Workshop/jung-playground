@@ -1,5 +1,6 @@
 import '../globals.css';
 
+import ReactQueryProviders from '@/state/queries/ReactQueryProvider';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
@@ -17,7 +18,13 @@ export default function RootLayout({
 }): JSX.Element {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<ReactQueryProviders>
+					<div className='max-w-[960px] mx-auto min-h-dvh flex items-center justify-center'>
+						{children}
+					</div>
+				</ReactQueryProviders>
+			</body>
 		</html>
 	);
 }
